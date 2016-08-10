@@ -1,1 +1,1 @@
-# jquery-popup-layer
+# jquery.poplayer
