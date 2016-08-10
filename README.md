@@ -1,5 +1,9 @@
 # 弹出层插件 PopupLayer
 
+可以方便的从不同的方向弹出自定义的弹层。
+
+A jQuery plugin to show a popup-layer in a page.
+
 minified version: ``2.58Kb``.
 
 ## 用法 Usage
