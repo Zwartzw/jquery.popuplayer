@@ -44,6 +44,8 @@ $('element').PopupLayer({
 
 ## 示例 Demo
 
+![Demo](http://localhost:4000/jquery-popuplayer/index.html)
+
 ## 计划 Plan
 
 + 1. 添加npm，bower等包管理工具的支持
