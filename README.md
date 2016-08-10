@@ -44,7 +44,7 @@ $('element').PopupLayer({
 
 ## 示例 Demo
 
-[Demo](https://edwardnevermind.github.io/jquery-popuplayer/index.html)
+[Demo](https://edwardnevermind.github.io/jquery-popuplayer/index.html){:target="_blank"}
 
 ## 计划 Plan
 
