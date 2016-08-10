@@ -1,1 +1,1 @@
-# jquery.poplayer
+# Poplayer
