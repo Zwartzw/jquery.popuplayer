@@ -53,8 +53,11 @@ css3在浏览器中css3的性能比jquery动画的性能要好一点，但是在
 参考资料:
 
 [前端性能优化之更平滑的动画](http://w3ctrain.com/2015/12/15/smoother-animation/)
+
 [无线页面动画优化实例](http://web.jobbole.com/85897/)
+
 [关于JS动画和CSS3动画的性能差异](http://www.cnblogs.com/kirachen/p/4614788.html)
+
 [CSS vs JS动画：谁更快？](http://zencode.in/19.CSS-vs-JS%E5%8A%A8%E7%94%BB%EF%BC%9A%E8%B0%81%E6%9B%B4%E5%BF%AB%EF%BC%9F.html)
 
 ## 示例 Demo
