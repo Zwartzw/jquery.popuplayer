@@ -62,7 +62,7 @@ css3在浏览器中css3的性能比jquery动画的性能要好一点，但是在
 
 ## 示例 Demo
 
-[Demo](https://edwardnevermind.github.io/jquery-popuplayer/index.html)
+[Demo](https://edwardnevermind.github.io/jquery-popuplayer/)
 
 ## 计划 Plan
 
