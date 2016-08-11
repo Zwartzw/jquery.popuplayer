@@ -61,14 +61,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
             content_position[this.options.to] = "100%";
 
-            this.$content.css({
+            this.$content.velocity({
                 'top': content_position.top,
                 'right': content_position.right,
                 'bottom': content_position.bottom,
                 'left': content_position.left,
                 'color': this.options.color,
-                'background-color': this.options.backgroundColor,
-                'transition': 'all ' + this.options.speed / 1000 + 's'
+                'background-color': this.options.backgroundColor
             });
         },
         attachElems: function attachElems() {
@@ -76,11 +75,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.$mask.appendTo($(this.options.target));
         },
         open: function open() {
-            this.$mask.fadeIn(this.options.speed);
+            // this.$mask.fadeIn();
+            this.$mask.velocity("fadeIn", { duration: this.options.speed });
 
             // 如果screenRatio为0那么根据屏幕宽高计算占比
             if (this.options.screenRatio != 0) {
-                this.$content.css(_defineProperty({}, this.options.to, (1 - this.options.screenRatio) * 100 + "%"));
+                this.$content.velocity(_defineProperty({}, this.options.to, (1 - this.options.screenRatio) * 100 + "%"), this.options.speed);
             } else {
                 var ratio = 0;
 
@@ -89,7 +89,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 } else {
                     ratio = this.options.heightOrWidth / $(window).outerHeight();
                 }
-                this.$content.css(_defineProperty({}, this.options.to, (1 - ratio) * 100 + "%"));
+                this.$content.velocity(_defineProperty({}, this.options.to, (1 - ratio) * 100 + "%"), this.options.speed);
             }
 
             if (this.options.blur) {
@@ -101,8 +101,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
         },
         close: function close() {
-            this.$mask.fadeOut(this.options.speed);
-            this.$content.css(_defineProperty({}, this.options.to, "100%"));
+            this.$mask.velocity("fadeOut", { duration: this.options.speed });
+            this.$content.velocity(_defineProperty({}, this.options.to, "100%"), this.options.speed);
 
             if (this.options.blur) {
                 this.$blurAreas.removeClass('popup-layer-blur');

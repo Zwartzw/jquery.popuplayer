@@ -46,6 +46,17 @@ $('element').PopupLayer({
 });
 ```
 
+## 动画优化
+
+css3在浏览器中css3的性能比jquery动画的性能要好一点，但是在移动端还是有明显的卡顿。jquery毕竟不是专门的动画库，而css3则强制使用GPU进行加速，但这样又会是浏览器一直处于高负荷状态，从而产生卡顿。 所以这里我们采用了[velocity.js](https://github.com/julianshapiro/velocity)这样的原生JavaScript动画库来处理动画。
+
+参考资料:
+
+[前端性能优化之更平滑的动画](http://w3ctrain.com/2015/12/15/smoother-animation/)
+[无线页面动画优化实例](http://web.jobbole.com/85897/)
+[关于JS动画和CSS3动画的性能差异](http://www.cnblogs.com/kirachen/p/4614788.html)
+[CSS vs JS动画：谁更快？](http://zencode.in/19.CSS-vs-JS%E5%8A%A8%E7%94%BB%EF%BC%9A%E8%B0%81%E6%9B%B4%E5%BF%AB%EF%BC%9F.html)
+
 ## 示例 Demo
 
 [Demo](https://edwardnevermind.github.io/jquery-popuplayer/index.html)
