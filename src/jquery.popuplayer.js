@@ -6,21 +6,7 @@
  * MIT licensed
  */
 
-;(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-
-        // AMD
-        define(['jquery'], factory);
-    } else if (typeof exports === 'object') {
-        
-        // CommonJS
-        module.exports = factory;
-    } else {
-        
-        // Browser globals
-        factory(jQuery);
-    }
-}(function($) {
+;(function($) {
 
     var PopupLayer = function(elem, opt) {
         this.$elem = $(elem);
@@ -162,4 +148,4 @@
         });
     };
 
-}));
+})(jQuery);
