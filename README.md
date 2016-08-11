@@ -5,6 +5,7 @@
 A jQuery plugin to show a popup-layer in a page.
 
 minified version: ``2.24Kb``.
+
 minified velocity version: ``2.31kb``. 
 
 ## 用法 Usage
