@@ -6,7 +6,7 @@
  * MIT licensed
  */
 
-;;(function (factory) {
+;(function (factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD
         define(factory);
