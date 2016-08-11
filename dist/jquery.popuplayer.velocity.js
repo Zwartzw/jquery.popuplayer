@@ -1,4 +1,6 @@
-"use strict";
+'use strict';
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -10,7 +12,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  * MIT licensed
  */
 
-;(function ($) {
+;(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(factory);
+    } else if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object') {
+        // CommonJS
+        module.exports = factory;
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+})(function ($) {
 
     var PopupLayer = function PopupLayer(elem, opt) {
         this.$elem = $(elem);
@@ -142,4 +155,4 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             new PopupLayer(this, options).init();
         });
     };
-})(jQuery);
+});
