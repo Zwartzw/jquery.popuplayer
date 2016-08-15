@@ -15,7 +15,7 @@
         this.$blurAreas = $("body > *");
         this.fromTo = 0;
         this.defaults = {
-           content: "", // 内容可以传入，纯文本和类名
+           content: "", // 内容
            target: "body", // 把弹出层添加到的目标节点
            from: "bottom",   // 向哪个方向展开
            blur: false, // 是否开启毛玻璃效果
@@ -45,7 +45,7 @@
             } else {
                 this.$content.html(this.options.content);
             }
-
+            
             var that = this;
 
             $(function() {
@@ -69,7 +69,7 @@
                 this.options.beforeOpen();
             }
             
-            this.$mask.velocity("fadeIn", this.options.speed);
+            this.$mask.velocity('fadeIn', this.options.speed);
             this.$content.velocity({ 
                 [that.options.from]: 0,
             }, this.options.speed, function() {
@@ -89,7 +89,7 @@
         close: function() {
             var that = this;
 
-            this.$mask.velocity("fadeOut", this.options.speed);
+            this.$mask.velocity('fadeOut', this.options.speed);
             this.$content.velocity({ 
                 [that.options.from]: (0 - that.fromTo)
             }, this.options.speed);
