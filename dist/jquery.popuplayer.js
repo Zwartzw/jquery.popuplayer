@@ -59,7 +59,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             var content_style = {};
             content_style['color'] = that.options.color;
             content_style['background'] = that.options.background;
-            content_style['display'] = "none";
             that.$content.css(content_style);
             that.$mask.css({ 'background': that.options.overlayBackground });
         },
@@ -75,6 +74,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
 
             this.$mask.fadeIn(this.options.speed);
+
             this.$content.animate(_defineProperty({}, that.options.from, 0), this.options.speed, function () {
 
                 if (that.options.from == 'top' || that.options.from == 'bottom') {
