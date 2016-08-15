@@ -10,8 +10,8 @@
 
     var PopupLayer = function(elem, opt) {
         this.$elem = $(elem);
-        this.$mask = $("<div class='popup-layer-overlay'></div>");
-        this.$content = $("<div class='popup-layer-content'></div>");
+        this.$mask = $('<div class="popup-layer-overlay"></div>');
+        this.$content = $('<div class="popup-layer-content"></div>');
         this.$blurAreas = $("body > *");
         this.fromTo = 0;
         this.defaults = {

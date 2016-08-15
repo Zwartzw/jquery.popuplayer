@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -14,8 +14,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
     var PopupLayer = function PopupLayer(elem, opt) {
         this.$elem = $(elem);
-        this.$mask = $("<div class='popup-layer-overlay'></div>");
-        this.$content = $("<div class='popup-layer-content'></div>");
+        this.$mask = $('<div class="popup-layer-overlay"></div>');
+        this.$content = $('<div class="popup-layer-content"></div>');
         this.$blurAreas = $("body > *");
         this.fromTo = 0;
         this.defaults = {
