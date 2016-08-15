@@ -2,19 +2,19 @@ body {
   -webkit-backface-visibility: hidden;
 }
 
-.popup-layer {
+.popup-layer-overlay {
   position: fixed;
   display: none;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 99;
-  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 9998;
 }
 
 .popup-layer-content {
   position: fixed;
+  z-index: 9999;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
