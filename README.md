@@ -32,19 +32,18 @@ $('element').PopupLayer();
 
 ```js
 $('element').PopupLayer({
-    content: "", // 内容，可以传入纯文本或类名或html
+    content: "", // 内容可以传入，纯文本和类名
     target: "body", // 把弹出层添加到的目标节点
-    to: "top",   // 向哪个方向展开
-    screenRatio: 0.3, // 占屏幕百分比
-    heightOrWidth: 300, // 当且仅当screenRatio为0时生效
+    from: "bottom",   // 向哪个方向展开
     blur: false, // 是否开启毛玻璃效果
-    speed: 200,  // 动画速度
+    speed: 150,  // 动画速度
     color: "#000", // 文本颜色
-    backgroundColor: "#fff", // 背景颜色
-    contentToggle: false, // 点击content是否关闭弹出层
+    background: "#fff", // 背景颜色
+    overlayBackground: 'rgba(0, 0, 0, 0.2)',
+    defaultClose: false, // 显示默认关闭按钮  TODO
     closeBtn: null,  // 指定关闭按钮
-    openCallback: null, // 展开的回调
-    closeCallback: null // 关闭的回调
+    beforeOpen: null, // 展开前事件
+    afterClose: null // 关闭后事件
 });
 ```
 

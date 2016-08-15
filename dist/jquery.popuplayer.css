@@ -3,7 +3,7 @@ body {
 }
 
 .popup-layer {
-  position: absolute;
+  position: fixed;
   display: none;
   top: 0;
   right: 0;
@@ -14,7 +14,7 @@ body {
 }
 
 .popup-layer-content {
-  position: absolute;
+  position: fixed;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
