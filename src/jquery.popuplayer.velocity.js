@@ -40,7 +40,11 @@
             this.bindEvents();
         },
         updateContent: function() {
-            this.$content.html($(this.options.content));
+            if ($(this.options.content).length > 0) {
+                this.$content.html($(this.options.content));
+            } else {
+                this.$content.html(this.options.content);
+            }
 
             var that = this;
 

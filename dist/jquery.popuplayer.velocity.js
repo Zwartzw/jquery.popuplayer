@@ -44,7 +44,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.bindEvents();
         },
         updateContent: function updateContent() {
-            this.$content.html($(this.options.content));
+            if ($(this.options.content).length > 0) {
+                this.$content.html($(this.options.content));
+            } else {
+                this.$content.html(this.options.content);
+            }
 
             var that = this;
 

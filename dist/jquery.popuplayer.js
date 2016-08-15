@@ -19,7 +19,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         this.$blurAreas = $("body > *");
         this.fromTo = 0;
         this.defaults = {
-            content: "", // 内容可以传入，纯文本和类名
+            content: "", // 内容
             target: "body", // 把弹出层添加到的目标节点
             from: "bottom", // 向哪个方向展开
             blur: false, // 是否开启毛玻璃效果
@@ -44,7 +44,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.bindEvents();
         },
         updateContent: function updateContent() {
-            this.$content.html($(this.options.content));
+            if ($(this.options.content).length > 0) {
+                this.$content.html($(this.options.content));
+            } else {
+                this.$content.html(this.options.content);
+            }
 
             var that = this;
 
